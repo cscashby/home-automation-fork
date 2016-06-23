@@ -2,11 +2,11 @@
   "dependencies": [],
   "singleton": false,
   "category": "notifications",
-  "author": "Z-Wave.Me",
+  "author": "Christian Ashby",
   "homepage": "http://razberry.z-wave.me",
   "icon": "icon.png",
-  "moduleName": "Forked Email",
-  "version": "1.0.0",
+  "moduleName": "Email",
+  "version": "0.0.1",
   "maturity": "stable",
   "repository": {
     "type": "git",
@@ -15,6 +15,7 @@
   "defaults": {
     "title": "__m_title__",
     "description": "__m_descr__",
+	"from": "",
     "subject": "",
     "message": "",
     "phone": "",
@@ -23,6 +24,10 @@
   "schema": {
     "type": "object",
     "properties": {
+	  "from": {
+		"type": "string",
+		"required": true
+	  },
       "subject": {
         "type": "string",
         "required": true
@@ -46,6 +51,9 @@
   },
   "options": {
     "fields": {
+	  "from": {
+		"label": "__l_from__"
+	  },
       "subject": {
         "label": "__l_subject__"
       },
@@ -53,7 +61,6 @@
         "label": "__l_message__"
       },
       "devices": {
-
         "fields": {
           "item": {
             "label": "__l_email__",
@@ -65,3 +72,4 @@
     }
   }
 }
+

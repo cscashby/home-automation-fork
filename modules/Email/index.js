@@ -55,8 +55,8 @@ Email.prototype.init = function (config) {
 //            console.log("INFO Email: message: " + self.config.message);
             _.unique(self.config.devices).forEach(function(email) {
 //                console.log("INFO Email: email " + email);
+//                console.log('echo "' + self.config.message + '" | mail -a "From: ' + self.config.from + '" -s "' + self.config.subject + '" ' + email);
                 system('echo "' + self.config.message + '" | mail -a "From: ' + self.config.from + '" -s "' + self.config.subject + '" ' + email);
-                console.log('echo "' + self.config.message + '" | mail -a "From: ' + self.config.from + '" -s "' + self.config.subject + '" ' + email);
             });
 
 
